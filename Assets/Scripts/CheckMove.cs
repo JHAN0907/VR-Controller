@@ -17,6 +17,8 @@ public class CheckMove : MonoBehaviour
     private bool update = false;
     private float checkTime = 0;
 
+    private bool checkNull = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,10 @@ public class CheckMove : MonoBehaviour
             buttonTime.text = string.Format("{0:N1}", checkTime);
         }
 
+        if(checkNum == 0)
+        {
+            checkNull = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -59,10 +65,11 @@ public class CheckMove : MonoBehaviour
 
     public void IncreasePoint()
     {
-        if (checkNum >= 5)
+        if (checkNum == 5 && !checkNull)
         {
             point++;
             update = true;
+            checkNull = true;
         }
     }
 

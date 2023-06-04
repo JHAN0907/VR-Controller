@@ -64,15 +64,15 @@ public class ButtonVR : MonoBehaviour
                 timeTrigger = false;
         }
 
-        if (OVRInput.GetUp(OVRInput.Button.One))
-        {
-            ResetApples();
-        }
+        //if (OVRInput.GetUp(OVRInput.Button.One))
+        //{
+        //    ResetApples();
+        //}
 
-        if (OVRInput.GetUp(OVRInput.Button.Two))
-        {
-            ResetUser();
-        }
+        //if (OVRInput.GetUp(OVRInput.Button.Two))
+        //{
+        //    ResetUser();
+        //}
     }
 
     private void OnTriggerEnter(Collider other)
